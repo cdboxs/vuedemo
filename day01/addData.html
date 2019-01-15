@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <input type="text" v-model="val" @keyup.enter="add">
+    <ul>
+        <li v-for="(item,index) in arr">{{item}} <span @click="del(index)">X</span></li>
+    </ul>
+
+</div>
+
+<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm=new Vue({
+        el:'#app',
+        data:{
+            val:'',
+            arr:[]
+        },
+        methods:{
+            add(){
+
+                this.arr.unshift(this.val);
+                console.log(this.arr);
+                window.localStorage.setItem('datas',JSON.stringify(this.arr));
+
+                this.val='';
+            },
+            del(i){
+                this.arr=this.arr.filter((item,index)=>index!==i);
+                window.localStorage.setItem('datas',JSON.stringify(this.arr));
+            }
+        },
+        created(){
+            JSON.parse(window.localStorage.getItem('datas'))==null?this.arr: JSON.parse(window.localStorage.getItem('datas'));
+
+        }
+    });
+</script>
+<style>
+    li{
+        width:200px;
+        height: 30px;
+        line-height: 30px;
+        list-style:none;
+        border:1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    li span{
+        display: block;
+        width:25px;
+        height: 25px;
+        color: #fff;
+        border-radius:50%;
+        background:red;
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+    }
+</style>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        
+        <input type="text" placeholder="请输入用户名" v-model="checkName">{{msg}}
+    </div>
+</body>
+</html>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+
+let vm= new Vue({
+    el:"#app",
+    data:{
+        checkName:''
+    },
+    computed:{
+      msg(){
+          if(this.checkName.length<3 || this.checkName==""){
+              return '用户名不得为空或少于3位'
+          }else if(this.checkName.length>6){
+              return '用户名不能大于6位';
+          }
+          return "";
+      }
+    },
+    methods:{
+        
+    }
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+

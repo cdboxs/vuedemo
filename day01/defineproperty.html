@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="userName">
+<p id="p"></p>
+</body>
+</html>
+<script type="text/javascript">
+    
+   let watchVal={
+       value:"",
+       set val(values){
+            this.value=values;
+       },
+       get val(){
+           return this.value;
+       }
+
+   }
+    document.getElementById('userName').addEventListener('input',function(){
+        watchVal.val=this.value;
+        document.getElementById('p').innerHTML=watchVal.value;
+    });
+
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
+    <title>Title</title>
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        {{message}}
+        <input type="text" v-model="message">
+        <p v-text="message"></p>
+        <p v-once>{{message}}</p>
+        <p v-html="html"></p>
+        <p>{{a.message}}{{a.name}}</p>
+    </div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+
+   let vm=new Vue({
+        el:"#app",
+       data:{
+            a:{},
+            message:"hello world123",
+           html:"<h2>12316546464</h2>"
+       }
+    });
+   vm.$set(vm.a,'name','cdboxs');
+    vm.a={message:1258,name:'cdboxs'}
+
+</script>

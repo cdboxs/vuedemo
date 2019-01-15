@@ -1,0 +1,20 @@
+[
+    {
+        "id":"1",
+        "isSelected":"true",
+        "productCover":"https://img10.360buyimg.com/cms/s80x80_jfs/t23209/191/39478516/43253/e66a539/5b23803aN61c1d5d5.jpg",
+        "productName":"nodeJS深入浅出",
+        "productInfo":"本深度讲解Node的图书源码级别探寻过Node的实现原理*一线Node开发者*真实的经验",
+        "productPrice":"51.8",
+        "productCount":"1"
+    },
+    {
+        "id":"2",
+        "isSelected":"true",
+        "productCover":"https://img10.360buyimg.com/cms/s80x80_jfs/t23209/191/39478516/43253/e66a539/5b23803aN61c1d5d5.jpg",
+        "productName":"nodeJS深入浅出",
+        "productInfo":"本深度讲解Node的图书源码级别探寻过Node的实现原理*一线Node开发者*真实的经验",
+        "productPrice":"27.8",
+        "productCount":"20"
+    }
+]

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <ul>
+        <li v-for="item in fruits">{{item.name}}---{{item.price}}</li>
+    </ul>
+    <ul>
+        <li v-for="item of fruits">{{item.name}}--{{item.price}}</li>
+    </ul>
+    <ul>
+        <li v-for="(item,key) in fruits">
+            {{key+1}}--{{item.name}}--{{item.price}}<span v-for="colors in item.color">{{colors}}</span>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm=new Vue({
+        el:'#app',
+        data:{
+            fruits:[
+                {name:'苹果',price:5.3,color:['红色','绿色','黄色']},
+                {name:'香蕉',price:8.6},
+                {name:'西瓜',price:13},
+                {name:'芒果',price:20},
+            ]
+        }
+    });
+</script>
+</body>
+</html>

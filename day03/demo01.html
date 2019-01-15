@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+        <div @click="parent">3333
+            <div @click.once="child">2222
+                <div @click="grandson">1111</div>
+            </div>
+        </div>
+        <a href="http://baidu.com" @click.prevent="parent">去百度</a>
+    </div>
+</body>
+</html>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+
+let vm= new Vue({
+    el:"#app",
+    data:{
+
+    },
+    methods:{
+        parent(){alert('333')},
+        child(){alert('222')},
+        grandson(){alert('111')}
+    }
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+

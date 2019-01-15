@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app" v-cloak>
+       <select name="" id="" v-model="slects">
+           <option value="" disabled>请选择</option>
+           <option value="1">苹果</option>
+           <option value="2">橘子</option>
+           <option value="3">香蕉</option>
+       </select>
+        <p>{{slects}}</p>
+        <p></p>
+        <p></p>
+    </div>
+
+
+</body>
+</html>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+let vm=new Vue({
+    el:"#app",
+    data:{
+        sexChecked:1,
+        sex:1,
+        slects:""
+    },
+    methods:{}
+});
+</script>
