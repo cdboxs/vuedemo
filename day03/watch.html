@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        
+        <input type="text" placeholder="请输入用户名" v-model="checkName">{{fullName}}
+    </div>
+</body>
+</html>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+//使用computed计算
+
+let vm =new Vue({
+    el:'#app',
+    data:{
+            firstName:'河北工2程技术学院-软件学院-',
+           lastName:'-你好吗？',
+           checkName:'',
+    },
+    computed:{
+        fullName(){
+         
+            return this.firstName+this.checkName+this.lastName;
+        }
+    }
+});
+
+
+
+// 使用watch监听数据变化
+// let vm= new Vue({
+//     el:"#app",
+//     watch:{
+//         checkName(newVal,oldVal){
+//             return this.fullName=this.firstName+newVal+this.lastName;
+//         }
+//     },
+//     data:{
+//        firstName:'河北工程技术学院-软件学院-',
+//        lastName:'-你好吗？',
+//        fullName:'',
+//        checkName:''
+//     },
+    
+//     computed:{
+     
+//     },
+//     methods:{
+        
+//     }
+
+// });
+
+</script>
+
+
+
+
+
+
+
+
+
+
