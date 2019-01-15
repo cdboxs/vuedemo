@@ -30,6 +30,6 @@
     * computed  不支持异步
     * watch mysider computed 的区别？
 - watch 监听值的变化时才会触发，支持异步，其他情况更善于应用 computed
-    * 
+    * 如果有异步逻辑涉及到计算了 一般都是watch，其他情况一般都是computed
 
 
