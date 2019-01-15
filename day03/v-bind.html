@@ -9,7 +9,8 @@
 <body>
 
         <div id="app">
-
+            <div :class="{x:flag,y:false}">v-bind</div>
+            <div :class="[class1,class2,class3]">v-bind</div>
         </div>
 
 
@@ -21,8 +22,17 @@
     let vm=new Vue({
         el:'#app',
         data:{
-            
+            class1:'x',
+            class2:'y',
+            class3:'z',
+            flag:true
         }
     });
 
 </script>
+<style>
+.x{background:pink;}
+.y{font-size: 32px;}
+.z{color: red;}
+
+</style>

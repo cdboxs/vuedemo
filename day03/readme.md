@@ -56,8 +56,12 @@
     ```
     <img :src="src">
     ``` 
-- 比较常用的属性 class  style
+- 比较常用的属性 class  style 
+    * 第一种是对象模式｛｝ 第二种是数组模式[]
     ```
+       <div :class="{x:flag}">v-bind</div>
+         <div :class="{x:flag,y:false}">v-bind</div>
+          <div :class="[class1,class2,class3]">v-bind</div>
     ```
 
 
