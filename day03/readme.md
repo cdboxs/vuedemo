@@ -25,7 +25,7 @@
         });
 - computed 计算“属性” 不是计算方法
     * 方法不会缓存，computed 会根据以来的属性进行缓存 
-    >> 不支持异步  
+    > 不支持异步  
     * 两部分组成 get() 和 set() [不能只写set--一般情况下通过js影响其他或者表单元素设置值的时候会调用set()]
     * computed  不支持异步
     * watch mysider computed 的区别？
